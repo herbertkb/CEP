@@ -37,7 +37,7 @@
 								input. 
 
 ******************************************************************************/
-//throwaway line
+
 
 import java.util.Scanner;			// take in user iput
 import java.io.BufferedReader;		// handle input from Dictionary.jar
