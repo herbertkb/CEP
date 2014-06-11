@@ -37,7 +37,11 @@
 								input. 
 
 ******************************************************************************/
+// minor test change !!!!!!!
+// NOTICE ME!! LOCAL CHANGE!
+//maybe an important change?
 
+// DAMN IT!!!
 
 import java.util.Scanner;			// take in user iput
 import java.io.BufferedReader;		// handle input from Dictionary.jar
