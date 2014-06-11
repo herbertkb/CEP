@@ -34,6 +34,9 @@
 								to input.
 	0005	10 Jun 2014	Keith	Tear out and replace changes from Fix#0004 with
 								simpler and faster Map data structure.
+	0006	10 Jun 2014	Keith	Combined a few lines together in the loop which
+								reads the translation file. More comments for
+								main loop.
 
 
 ******************************************************************************/
@@ -65,9 +68,7 @@ public class Dictionary {
 		Map<String, String> wordMap = new HashMap<String, String>();
 		
 		while (parser.hasNextLine()) {
-			String line = parser.nextLine();
-			line = line.trim();
-			String[] fields = line.split("\t"); 
+			String[] fields = parser.nextLine().trim().split("\t");
 			wordMap.put(fields[0], fields[1]);
 		}
 		
@@ -81,8 +82,12 @@ public class Dictionary {
 		Scanner input = new Scanner(System.in, "UTF-8");
 		PrintStream output = new PrintStream(System.out, true, "UTF-8");
 		
-		// Main loop //////////////////////////////////////////////////////////
-		// Take query word from System.in and check if 
+		/** Main loop //////////////////////////////////////////////////////////
+		// Take query word from System.in and check if it exists in the word
+		// map. If it does, print the translation out to the console. 
+		// Otherwise, print an error message. 
+		
+		*/
 		while ( true ) {
 			String query = input.next();
 			if (wordMap.containsKey( query )) {	
